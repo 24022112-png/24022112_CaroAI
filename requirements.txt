@@ -1,0 +1,39 @@
+# =========================================================================
+# PROJECT REQUIREMENTS & ENVIRONMENT SETUP: CARO AI GAME (C++)
+# =========================================================================
+
+[Compiler Requirements]
+- Compiler: GCC (g++), Clang, or MSVC (Microsoft Visual C++)
+- C++ Standard: C++11 or higher required (C++14/C++17 recommended)
+- Optimization Flag: -O3 (Crucial for deep Alpha-Beta tree pruning performance)
+
+[Standard Template Library (STL) Dependencies]
+- <iostream>  : Console Input/Output operations
+- <vector>    : Dynamic 2D board matrix management
+- <chrono>    : High-resolution timers for move execution tracking
+- <iomanip>   : Tabular alignment and decimal point formatting
+- <string>    : Game state names and string manipulations
+- <cstdlib>   : Screen clearing commands (cls/clear)
+- <cmath>     : Positional center-distance calculation (abs)
+- <algorithm> : Move ordering via std::stable_sort, std::max, std::min
+- <sstream>   : Win-rate percentage formatting via std::stringstream
+
+[Project File Structure]
+- main.cpp     : Game initialization, configuration, and main loop
+- LogicGame.h  : Board creation, visual rendering, and win-condition checks
+- DanhGia.h    : Positional heuristics and chamDiemChuoi scoring rules
+- AI.h         : Minimax & Alpha-Beta Pruning core search algorithms
+
+[Build & Compilation Commands]
+# Linux / macOS (GCC g++)
+g++ main.cpp -o CaroAI -O3 -std=c++11
+
+# Windows (MinGW g++)
+g++ main.cpp -o CaroAI.exe -O3 -std=c++11
+
+[Execution]
+# Linux / macOS
+./CaroAI
+
+# Windows
+CaroAI.exe
